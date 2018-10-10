@@ -18,8 +18,13 @@ class Fishy extends World {
     this.fish = fish;
   }
   
+  public WorldImage background = new RectangleImage(this.SCENE, this.SCENE, OutlineMode.SOLID, 
+      Color.cyan);
+  
   public WorldScene makeScene() {
     // TODO: make the fucking scene
+    return this
+                .getEmptyScene().placeImageXY(background, this.SCENE / 2, this.SCENE / 2);
   }
   
   public World start() {
